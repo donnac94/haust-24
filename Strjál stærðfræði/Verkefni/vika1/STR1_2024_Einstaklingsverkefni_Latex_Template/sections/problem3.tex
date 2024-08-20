@@ -1,0 +1,82 @@
+\newpage
+\subsection*{Dæmi 3 (e. Problem 3) (6\%+10\%+10\%+10\%)\label{section:daemi3}}
+Setjið upp sanntöflur fyrir eftirfarandi samsettar yrðingar. ("Construct a truth table for each of these compound propositions")
+\begin{multicols}{2}
+    \begin{itemize}
+        \item [a)] $p \to \neg p$
+        \item [b)] $p \oplus (p \lor q)$
+        \item [c)] $(q \to \neg p)\leftrightarrow (p \leftrightarrow q)$
+        \item [d)] $(p \leftrightarrow q)\oplus (p \leftrightarrow \neg q)$
+    \end{itemize}
+\end{multicols}
+\subsection*{Svör við Dæmi 3 (e. Answers to Problem 3)}
+\begin{itemize}
+    \item[a)]
+        \begin{minipage}[t]{\linewidth}
+            \renewcommand{\arraystretch}{1.5} 
+            \setlength{\tabcolsep}{12pt} 
+            \begin{tabular}{ |c|c|c| } 
+                \hline
+                $p$ & $\neg p$ & $p \to \neg p$\\
+                \hline
+                T & F &  \\
+                \hline
+                F & T &  \\ 
+                \hline
+            \end{tabular}
+        \end{minipage}
+    \item[b)]
+        \begin{minipage}[t]{\linewidth}
+            \renewcommand{\arraystretch}{1.5} 
+            \setlength{\tabcolsep}{12pt} 
+            \begin{tabular}{ |c|c|c|c| }
+                \hline
+                $p$ & $q$ & $p \lor q$ & $p \oplus (p \lor q)$\\
+                \hline
+                T & T &  &  \\
+                \hline
+                T & F &  &  \\
+                \hline
+                F & T &  &  \\
+                \hline
+                F & F &  &  \\
+                \hline
+            \end{tabular}
+        \end{minipage}
+    \item[c)]
+        \begin{minipage}[t]{\linewidth}
+            \renewcommand{\arraystretch}{1.5} 
+            \setlength{\tabcolsep}{12pt} 
+            \begin{tabular}{ |c|c|c|c|c|c| } 
+                \hline
+                $p$ & $q$ & $\neg p$ & $q \to \neg p$ & $p \leftrightarrow q$ & $(q \to \neg p)\leftrightarrow (p \leftrightarrow q)$\\
+                \hline
+                T & T &  &  &  &  \\ 
+                \hline
+                T & F &  &  &  &  \\
+                \hline
+                F & T &  &  &  &  \\
+                \hline
+                F & F &  &  &  &  \\
+                \hline
+            \end{tabular}
+        \end{minipage}
+    \item[d)]
+        \begin{minipage}[t]{\linewidth}
+            \renewcommand{\arraystretch}{1.5} 
+            \setlength{\tabcolsep}{12pt} 
+            \begin{tabular}{ |c|c|c|c|c|c| } 
+                \hline
+                $p$ & $q$ & $\neg q$ & $p \leftrightarrow q$ & $p \leftrightarrow \neg q$ & $(p \leftrightarrow q)\oplus (p \leftrightarrow \neg q)$\\
+                \hline
+                T & T &  &  &  &  \\ 
+                \hline
+                T & F &  &  &  &  \\
+                \hline
+                F & T &  &  &  &  \\
+                \hline
+                F & F &  &  &  &  \\
+                \hline
+            \end{tabular}
+        \end{minipage}
+\end{itemize}
