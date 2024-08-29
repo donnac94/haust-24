@@ -1,0 +1,233 @@
+{\rtf1\mac\ansicpg10000\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 .SFNS-Bold;\f1\fnil\fcharset0 .SFNS-Regular;\f2\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;
+\f3\fnil\fcharset0 .AppleSystemUIFontMonospaced-Semibold;}
+{\colortbl;\red255\green255\blue255;\red14\green14\blue14;}
+{\*\expandedcolortbl;;\cssrgb\c6700\c6700\c6700;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww30680\viewh17120\viewkind1
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f0\b\fs30 \cf2 Question 1. \
+	Task 1: Counting Lines, Words, and Characters in a File
+\f1\b0\fs28 \
+\
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\partightenfactor0
+\cf2 	\'95	
+\f0\b Command
+\f1\b0 : 
+\f2 wc filename.txt
+\f1 \
+	\'95	
+\f0\b Explanation
+\f1\b0 :\
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\partightenfactor0
+\cf2 	\'95	The 
+\f2 wc
+\f1  command stands for \'93word count,\'94 and it provides the number of lines, words, and characters in a file.\
+	\'95	The output consists of three numbers: lines, words, and characters (in that order).\
+	\'95	Example: 
+\f2 wc /labs/tolh24/assignments/mystery.txt
+\f1  will give you the count of lines, words, and characters in 
+\f2 mystery.txt
+\f1 .\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+\cf2 \
+
+\f0\b\fs30 Task 2: Listing Files with ls and Finding File Sizes
+\f1\b0\fs28 \
+\
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\partightenfactor0
+\cf2 	\'95	
+\f0\b Command
+\f1\b0 : 
+\f2 ls -l /labs/tolh24/assignments/
+\f1 \
+	\'95	
+\f0\b Explanation
+\f1\b0 :\
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\partightenfactor0
+\cf2 	\'95	The 
+\f2 ls -l
+\f1  command lists the contents of a directory in long format, providing detailed information about each file, including permissions, number of links, owner, group, size (in bytes), and timestamp.\
+	\'95	Example: 
+\f2 ls -l /labs/tolh24/assignments/mystery.txt
+\f1  displays detailed information about 
+\f2 mystery.txt
+\f1 , where the size in bytes is shown in the fifth column.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+\cf2 \
+
+\f0\b\fs30 Task 3: Finding the Number of Empty Lines in a File
+\f1\b0\fs28 \
+\
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\partightenfactor0
+\cf2 	\'95	
+\f0\b Command
+\f1\b0 : 
+\f2 grep -c '^$' /labs/tolh24/assignments/mystery.txt
+\f1 \
+	\'95	
+\f0\b Explanation
+\f1\b0 :\
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\partightenfactor0
+\cf2 	\'95	The 
+\f2 grep
+\f1  command searches for patterns within files.\
+	\'95	The 
+\f2 -c
+\f1  flag counts the number of lines that match the pattern.\
+	\'95	The 
+\f2 '^$'
+\f1  pattern specifically matches empty lines (lines with no characters).\
+	\'95	Example: Running the command above will return the number of empty lines in 
+\f2 mystery.txt
+\f1 .\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+\cf2 \
+
+\f0\b\fs30 Task 4: Viewing the Hex Representation of a File
+\f1\b0\fs28 \
+\
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\partightenfactor0
+\cf2 	\'95	
+\f0\b Command
+\f1\b0 : 
+\f2 hexdump -C /labs/tolh24/assignments/mystery.txt
+\f1 \
+	\'95	
+\f0\b Explanation
+\f1\b0 :\
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\partightenfactor0
+\cf2 	\'95	The 
+\f2 hexdump
+\f1  command displays the raw data of a file in hexadecimal format.\
+	\'95	The 
+\f2 -C
+\f1  flag shows the output in canonical hex+ASCII display, meaning you see both the hex representation of the data and the corresponding ASCII characters.\
+	\'95	Example: Running 
+\f2 hexdump -C /labs/tolh24/assignments/mystery.txt
+\f1  displays the file content with hex values on the left and ASCII characters on the right.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+\cf2 \
+
+\f0\b\fs30 Task 5: Finding the Most Common Hex Value
+\f1\b0\fs28 \
+\
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\partightenfactor0
+\cf2 	\'95	
+\f0\b Command
+\f1\b0 : 
+\f2 hexdump -v -e '/1 "%02X\\n"' /labs/tolh24/assignments/mystery.txt | sort | uniq -c | sort -nr
+\f1 \
+	\'95	
+\f0\b Explanation
+\f1\b0 :\
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\partightenfactor0
+\cf2 	\'95	
+\f2 hexdump -v -e '/1 "%02X\\n"'
+\f1  extracts each byte in the file as a two-digit hexadecimal number.\
+	\'95	
+\f2 sort
+\f1  sorts the hex values.\
+	\'95	
+\f2 uniq -c
+\f1  counts the occurrences of each unique hex value.\
+	\'95	
+\f2 sort -nr
+\f1  sorts the counted values in descending order, so the most frequent hex value appears at the top.\
+	\'95	Example: The command will list the hex values in descending order of frequency, revealing the most common hex value, such as 
+\f2 0A
+\f1  (a newline character).\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+\cf2 \
+
+\f0\b\fs30 Key Takeaways:
+\f1\b0\fs28 \
+\
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\partightenfactor0
+\cf2 	\'95	
+\f3\b wc
+\f1\b0 : Useful for counting lines, words, and characters in a file.\
+	\'95	
+\f3\b ls -l
+\f1\b0 : Lists detailed information about files, including their size in bytes.\
+	\'95	
+\f3\b grep -c '^$'
+\f1\b0 : Counts the number of empty lines in a file.\
+	\'95	
+\f3\b hexdump -C
+\f1\b0 : Displays a file\'92s content in both hex and ASCII formats.\
+	\'95	
+\f3\b hexdump -v -e '/1 "%02X\\n"' | sort | uniq -c | sort -nr
+\f1\b0 : Identifies the most common hex value in a file.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+\cf2 \
+This summary should help you understand the purpose and functionality of each command and how to use them for analyzing files in a Unix-like environment.\
+\
+
+\f0\b\fs30 Question 2. \
+Summary of Question 2, Tasks 1-4\
+\
+Task 1: Generating a Sequence of Numbers with Padding\
+- Goal: Generate a list of numbers starting at 9, with an interval of 3, up to 30, where each number is padded with zeros to ensure equal width.\
+- Command: \
+  seq -f "%02g" 9 3 30\
+- Explanation:\
+  - seq: Generates a sequence of numbers.\
+  - -f "%02g": This flag ensures the numbers are formatted to be at least two digits wide, padding with zeros if necessary.\
+  - 9 3 30: Starts at 9, increments by 3, and ends at 30.\
+- Outcome: The output is a sequence of numbers padded with zeros:\
+  09\
+  12\
+  15\
+  18\
+  21\
+  24\
+  27\
+  30\
+\
+Task 2: Creating Multiple Folders Using Curly Braces\
+- Goal: Create multiple folders in one command.\
+- Command:\
+  mkdir folder\{1..4\}\
+- Explanation:\
+  - mkdir: Command to create directories.\
+  - folder\{1..4\}: Uses curly braces to generate folder names folder1, folder2, folder3, and folder4 in a single command.\
+- Outcome: Creates the folders folder1, folder2, folder3, and folder4.\
+\
+Task 3: Generating a Numbered List with Newlines\
+- Goal: Create a list of student names (Student01 to Student05), each on a new line.\
+- Command:\
+  echo Student0\{1..5\} | tr ' ' '\\n'\
+- Explanation:\
+  - echo Student0\{1..5\}: Generates the list Student01 Student02 Student03 Student04 Student05.\
+  - |: Pipe operator, used to pass the output of one command as input to another.\
+  - tr ' ' '\\n': Translates (replaces) spaces with newline characters, putting each student name on a new line.\
+- Outcome: The list of student names, each on its own line:\
+  Student01\
+  Student02\
+  Student03\
+  Student04\
+  Student05\
+\
+Task 4: Using a Loop with seq for Dynamic List Generation\
+- Goal: Use a loop to generate a list of student names, with flexibility to handle any range of numbers, using padding when necessary.\
+- Command:\
+  for num in $(seq -w 1 5); do echo Student$num; done\
+- Explanation:\
+  - for num in $(seq -w 1 5);: Loops over a sequence generated by seq, where the -w flag ensures padding with zeros if necessary.\
+  - do echo Student$num;: For each iteration, echoes Student followed by the padded number.\
+  - done: Ends the loop.\
+- Outcome: Produces a dynamically generated list of student names, such as:\
+  Student01\
+  Student02\
+  Student03\
+  Student04\
+  Student05\
+- Extensibility: By changing the range in seq, you can easily adjust the number of student names generated (e.g., from 1 to 100).\
+\
+Key Takeaways:\
+- Padding Numbers: The seq command with the -f or -w flag is essential for generating sequences with padded numbers.\
+- Curly Braces: Useful for creating sequences or multiple items (files, directories, strings) in a single command.\
+- Pipes and tr: The pipe operator (|) allows for chaining commands, and tr is effective for translating characters (e.g., converting spaces to newlines).\
+- Loops: Command-line loops (for) are powerful tools for automating repetitive tasks, especially when combined with dynamically generated sequences from commands like seq.\
+}

@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\geometry{a4paper}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc} 
+\usepackage{graphicx} 
+\usepackage{hyperref} 
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+% Define a custom command for fill-in-the-blank
+\newcommand{\fillin}[2][4cm]{%
+  \begin{tikzpicture}[baseline=(current bounding box.south)]
+    \draw[thick] (0,0) -- (#1,0);
+    \if\relax\detokenize{#2}\relax
+      % Do nothing if #2 is empty
+    \else
+      \node[above=2pt] at (0.5*#1,0) {#2};
+    \fi
+  \end{tikzpicture}%
+}
+
+
+\title{
+\centerline{\includegraphics[width=50mm]{images/ru_logo.jpg}}
+Hópverkefni 1 (e. Group Assignment 1)
+\large  \\
+T-117-STR1, Strjál stærðfræði I, 2024-3 \\ 
+\small Reykjavik University - Department of Computer Science, Menntavegi 1, IS-101 Reykjavík, Iceland 
+  }
+
+\author{
+    Kennari: Harpa Guðjónsdóttir\\
+    \texttt{harpagud@ru.is}
+}
+
+\date{Skilafrestur (e. Deadline): 03.09.2024}
+\begin{document}
+\maketitle
+\input{sections/introduction}
+\section*{\textbf{Skiladæmi (e. Hand-in problems) :}}
+\input{sections/problem1.tex}
+\input{sections/problem2.tex}
+\input{sections/problem3.tex}
+\input{sections/problem4.tex}
+\input{sections/problem5.tex}
+\input{sections/problem6.tex}
+\end{document}

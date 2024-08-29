@@ -1,0 +1,128 @@
+{\rtf1\mac\ansicpg10000\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red189\green198\blue208;\red12\green14\blue18;
+\red229\green123\blue34;\red251\green156\blue67;\red198\green146\blue255;\red104\green177\blue255;\red150\green204\blue255;
+\red0\green0\blue0;\red255\green255\blue255;\red120\green129\blue140;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c78824\c81961\c85098;\cssrgb\c5098\c6667\c9020;
+\cssrgb\c92549\c55686\c17255;\cssrgb\c99216\c67451\c32941;\cssrgb\c82353\c65882\c100000;\cssrgb\c47451\c75294\c100000;\cssrgb\c64706\c83922\c100000;
+\cssrgb\c0\c0\c0\c84706;\cssrgb\c100000\c100000\c100000;\cssrgb\c54510\c58039\c61961;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww23320\viewh15520\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\fs26 \cf0 Problem C - Budget \
+Donna \'fatsk\'fdrir \
+- Magn\'fas Forritar\
+\
+\'de\'fa ert a\'f0 b\'faa til budget fyrir verkefni \'e1 Mars.\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 4x integer innt\'f6k\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 b, p1, p2, p3 \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 heildar budget fyrir verkefni\'f0 er -10^6 <= b <= 10^6\
+\
+p1 er kostna\'f0ur fyrir cloud seeding = -10^6 <= p1 <10^6\
+p2 er kostna\'f0ur fyrir magnet = -10^6 <= p2 <10^6\
+p2 er kostna\'f0ur fyrir elevator = -10^6 <= p3 <10^6\
+\
+Sko\'f0a\'f0u hvort a\'f0 p1 + p2 +p3 s\'e9 yfir budget e\'f0a ekki \
+\
+Ef \'fea\'f0 er EKKI yfir  prenta \'fat - \expnd0\expndtw0\kerning0
+print("Budget is sufficient.")\
+Ef \'fea\'f0 er yfir prenta \'fat - # print("Budget is insufficient.")\
+__________\
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+StarterCode: \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs32 \cf3 \cb4 \strokec3 budget \cf5 \strokec5 =\cf3 \strokec3  \cf6 \strokec6 int\cf3 \strokec3 (\cf7 \strokec7 input\cf3 \strokec3 ())\cb1 \
+\cb4 project1 \cf5 \strokec5 =\cf3 \strokec3  \cf6 \strokec6 int\cf3 \strokec3 (\cf7 \strokec7 input\cf3 \strokec3 ())\cb1 \
+\cb4 project2 \cf5 \strokec5 =\cf3 \strokec3  \cf6 \strokec6 int\cf3 \strokec3 (\cf7 \strokec7 input\cf3 \strokec3 ())\cb1 \
+\cb4 project3 \cf5 \strokec5 =\cf3 \strokec3  \cf6 \strokec6 int\cf3 \strokec3 (\cf7 \strokec7 input\cf3 \strokec3 ())\cb1 \
+\
+\
+\cb4 netto \cf5 \strokec5 =\cf3 \strokec3  budget\cf5 \strokec5 -\cf3 \strokec3 project1\cf5 \strokec5 -\cf3 \strokec3 project2\cf5 \strokec5 -\cf3 \strokec3 project3\cb1 \
+\cf5 \cb4 \strokec5 if\cf3 \strokec3  netto\cf5 \strokec5 <\cf8 \cb4 \strokec8 0\cf3 \cb4 \strokec3 :\cb1 \
+\cb4     \cf7 \strokec7 print\cf3 \strokec3 (\cf9 \cb4 \strokec9 "Budget is insufficient."\cf3 \cb4 \strokec3 )\cb1 \
+\cf5 \cb4 \strokec5 else\cf3 \strokec3 :\cb1 \
+\cb4     \cf7 \strokec7 print\cf3 \strokec3 (\cf9 \cb4 \strokec9 "Budget is sufficient."\cf3 \cb4 \strokec3 )\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \strokec2 \
+\
+\
+Vandam\'e1l sem komu upp: \
+- Magn\'fas setti inn form\'faluna \'ed sta\'f0inn fyrir a\'f0 reikna \'fat \'feegar \'fea\'f0 kom a\'f0 prenta \'fat hvort a\'f0 samanlagt kostna\'f0ur hafi veri\'f0 yfir budget e\'f0a ekki \
+- Leystir \'fev\'ed me\'f0 \'fev\'ed a\'f0 nota if setningu hvort a\'f0 samanlagt kostna\'f0ur \'e1 verkefnunum hafi veri\'f0 yfir budget e\'f0a ekki. \
+\
+____________\
+\
+Problem B - Maximum \
+Elfa \'fatsk\'fdrir\
+Donna Forritar \
+\
+\pard\pardeftab720\partightenfactor0
+\cf10 \cb11 \strokec10 Elfa \'fatsk\'fdrir\'a0\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf10 \cb11 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 Donna forritar\'a0\cf0 \cb1 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf10 \cb11 \strokec10 \'a0\cb1 \
+\cb11 Verkefni\'f0 sn\'fdst um \'fea\'f0 a\'f0 f\'e1 h\'e6stu t\'f6luna af \'feremur sem \'fe\'fa setur inn\'a0\cb1 \
+\cb11 \'a0\'a0\cb1 \
+\cb11 \'derj\'fa innt\'f6k sem eiga a\'f0 vera heilar t\'f6lur a,b og c\'a0\cb1 \
+\cb11 \'a0\cb1 \
+\cb11 Byrja\'f0u \'e1 \'fev\'ed a\'f0 skilgreina a\'f0 ef a er st\'e6rri e\'f0a jafnt og b\'e6\'f0i b og c \'fe\'e1 prentaru \'fat a\'a0\cb1 \
+\cb11 \'a0\cb1 \
+\cb11 N\'e6st skaltu skilgreina a\'f0 ef b er st\'e6rra e\'f0a jafnt og a e\'f0a c \'fe\'e1 prentaru \'fat b\'a0\cb1 \
+\cb11 \'a0\cb1 \
+\cb11 Annars skaltu prenta \'fat c\'a0\cb1 \
+\cb11 \'a0\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf10 \cb11 K\'f3\'f0inn: \'a0\cb1 \uc0\u8232 \cb11 \'a0\cb1 \uc0\u8232 
+\f1\fs32 \cf12 \cb4 \strokec12 # Reading input values\cf3 \cb1 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \cb4 a \cf5 \strokec5 =\cf3 \strokec3  \cf6 \strokec6 int\cf3 \strokec3 (\cf7 \strokec7 input\cf3 \strokec3 ())\cb1 \
+\cb4 b \cf5 \strokec5 =\cf3 \strokec3  \cf6 \strokec6 int\cf3 \strokec3 (\cf7 \strokec7 input\cf3 \strokec3 ())\cb1 \
+\cb4 c \cf5 \strokec5 =\cf3 \strokec3  \cf6 \strokec6 int\cf3 \strokec3 (\cf7 \strokec7 input\cf3 \strokec3 ())\cb1 \
+\
+\cf5 \cb4 \strokec5 if\cf3 \strokec3  a \cf5 \strokec5 >\cf3 \strokec3  b \cf5 \strokec5 and\cf3 \strokec3  a \cf5 \strokec5 >\cf3 \strokec3  c:\cb1 \
+\cb4   \cf7 \strokec7 print\cf3 \strokec3 (a)\cb1 \
+\cf5 \cb4 \strokec5 elif\cf3 \strokec3  b \cf5 \strokec5 >\cf3 \strokec3  a \cf5 \strokec5 and\cf3 \strokec3  b \cf5 \strokec5 >\cf3 \strokec3  c:\cb1 \
+\cb4   \cf7 \strokec7 print\cf3 \strokec3 (b)\cb1 \
+\cf5 \cb4 \strokec5 else\cf3 \strokec3 : \cf7 \strokec7 print\cf3 \strokec3 (c)\cb1 \
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf10 \strokec10 \
+\cb11 \'a0\
+\
+Vandm\'e1l sem komu upp: \
+- enginn s\'e9rst\'f6k vandam\'e1l nema kannski uppsetning \'e1 if, elif og else. \
+___\
+\
+\cb1 \
+\cb11 \'a0\cb1 \
+\cb11 \'a0\cb1 \
+\cb11 \'a0\cb1 \
+\cb11 \'a0\cb1 \
+\cb11 \'a0\cb1 \
+\cb11 \'a0\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+\
+\
+}

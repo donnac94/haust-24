@@ -1,0 +1,61 @@
+
+Summary of Question 4 and All Tasks
+
+Introduction:
+Automating or simplifying repetitive tasks is a common need in command-line environments. In this question, you're asked to create a shell script to generate a top-5 list of users who sent the most wall messages. This script will save you from having to retype a long chain of commands each time.
+
+Goal:
+Learn how to create an executable shell script that runs the necessary commands to generate the top-5 list of wall message offenders. Additionally, learn how to change file permissions to make a script executable, and how to run and modify scripts.
+
+Tasks and Explanations:
+
+Task 1: Review the Lecture and Slides
+- Watch the lecture and review any provided materials on how to create and use shell scripts. Understanding the basics is crucial before moving on to scripting.
+
+Task 2: Create the Shell Script File
+- Command:
+  nano top5wallusers.sh
+- Explanation:
+  - Use a text editor like nano to create a new file called top5wallusers.sh.
+- Command:
+  chmod u+x top5wallusers.sh
+- Explanation:
+  - Use chmod to give yourself execute permissions on the file. This makes the script executable.
+
+Task 3: Write the Script
+- Script Content:
+  #!/bin/bash
+  # This script generates a top-5 list of users who sent the most wall messages.
+
+  grep 'user' /labs/tolh23/assignments/a2_messages.log | cut -d' ' -f9 | sort | uniq -c | sort -nr | head -n 5
+- Explanation:
+  - #!/bin/bash specifies that the script should be run using the Bash shell.
+  - The commands inside the script are the same ones used to generate the top-5 list in previous tasks.
+
+Task 4: Run the Script
+- Command:
+  ./top5wallusers.sh
+- Explanation:
+  - Run the script by typing ./ followed by the script name. Ensure that it outputs the correct top-5 list.
+
+Task 5: Show Your Solution to a TA
+- Once you've verified that the script works correctly, show it to a TA. They will provide you with "the secret number" once satisfied.
+
+Extra Task: Modify the Script to Use Parameters
+- Script Content:
+  #!/bin/bash
+  # This script generates a top-5 list of users who sent the most wall messages.
+
+  grep 'user' "$1" | cut -d' ' -f9 | sort | uniq -c | sort -nr | head -n 5
+- Explanation:
+  - Modify the script to accept the log file path as a parameter ($1). This makes the script more flexible and allows it to be used with different log files.
+- Command:
+  ./top5wallusers.sh /labs/tolh23/assignments/a2_messages.log
+- Explanation:
+  - Run the modified script with the file path as a parameter to generate the top-5 list.
+
+Key Takeaways:
+- Shell scripts allow you to automate and simplify repetitive tasks.
+- chmod is used to change file permissions, making a script executable.
+- Parameters ($1, $2, etc.) can be passed to scripts to make them more flexible.
+- Scripts can be run directly from the terminal, making them an efficient tool for repeated operations.
