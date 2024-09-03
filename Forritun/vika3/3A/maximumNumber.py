@@ -1,4 +1,4 @@
-max_number = 0 
+maxi = 0 
 
 # lalalalal 
 
@@ -8,7 +8,7 @@ while True:
   if num < 0:
     break
   
-  if num > max_number:
-    max_number = num
+  if num > maxi:
+    maxi = num
 
-print(max_number)
+print(maxi)
