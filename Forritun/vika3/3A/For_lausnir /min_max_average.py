@@ -16,6 +16,7 @@ for i in range(num_of_numbers):
         min_num = number
     elif number > max_num:
         max_num = number
+        
     sum_num += number
 
 # Average is the sum of values divided by the number of total input (which the user conveniently inputs in the begining)
