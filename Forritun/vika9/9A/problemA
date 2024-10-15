@@ -1,0 +1,114 @@
+from typing import Tuple
+
+# Constants
+NORTH = "n"
+EAST = "e"
+SOUTH = "s"
+WEST = "w"
+
+STARTING_LOCATION = (1, 1)
+FINAL_DESTINATION = (3, 1)
+LEVER_TILES = [(1, 2), (2, 2), (2, 3), (3, 2)]
+
+def main():
+    location = STARTING_LOCATION
+    coins = 0
+    levers_pulled = set()  # To track tiles where the lever was pulled
+
+    while location != FINAL_DESTINATION:
+        location, coins = play_one_move(location, coins, levers_pulled)
+
+    print(f"Victory! Total coins {coins}.")
+
+def play_one_move(location: Tuple[int], coins: int, levers_pulled: set) -> Tuple[Tuple[int], int]:
+    """Plays one move of the game and updates the location and coin count."""
+    
+    valid_directions = find_directions(location)
+    
+    while True:  # Keep asking for a valid direction until provided
+        direction = get_direction(valid_directions)
+
+        if direction in valid_directions:
+            location = move(direction, location)
+            break  # Exit the loop immediately after a valid move
+        else:
+            print("Not a valid direction!")
+
+    # After moving to a new tile, check if it's a lever tile and hasn't been pulled yet
+    if location in LEVER_TILES and location not in levers_pulled:
+        coins = pull_lever(coins, levers_pulled, location)
+
+    return location, coins
+
+def pull_lever(coins: int, levers_pulled: set, location: Tuple[int]) -> int:
+    """Offers the player the option to pull a lever and updates the coin count."""
+    print("Pull a lever (y/n):")
+    response = input().strip().lower()
+    if response == 'y':
+        coins += 1
+        levers_pulled.add(location)
+        print(f"You received 1 coin, your total is now {coins}.")
+    return coins
+
+def find_directions(location: Tuple[int]) -> Tuple[str]:
+    """Returns valid directions as a string given the supplied location."""
+    if location == (1, 1):
+        valid_directions = (NORTH,)
+    elif location == (1, 2):
+        valid_directions = NORTH, EAST, SOUTH
+    elif location == (1, 3):
+        valid_directions = EAST, SOUTH
+    elif location == (2, 1):
+        valid_directions = (NORTH,)
+    elif location == (2, 2):
+        valid_directions = SOUTH, WEST
+    elif location == (2, 3):
+        valid_directions = EAST, WEST
+    elif location == (3, 2):
+        valid_directions = NORTH, SOUTH
+    elif location == (3, 3):
+        valid_directions = SOUTH, WEST
+
+    return valid_directions
+
+def get_direction(valid_directions: Tuple[str]) -> str:
+    print_directions(valid_directions)
+    print("Direction:")
+    return input().lower()
+
+def print_directions(available_directions: Tuple[str]) -> None:
+    print("You can travel: ", end="")
+
+    one_done_already = False
+    for direction in available_directions:
+        if one_done_already:
+            print(" or ", end="")
+
+        if direction == NORTH:
+            print("(N)orth", end="")
+        elif direction == EAST:
+            print("(E)ast", end="")
+        elif direction == SOUTH:
+            print("(S)outh", end="")
+        elif direction == WEST:
+            print("(W)est", end="")
+
+        one_done_already = True
+
+    print(".")
+
+def move(direction: str, location: Tuple[int]) -> Tuple[int]:
+    """Returns updated location given the direction."""
+    x, y = location
+    if direction == NORTH:
+        y += 1
+    elif direction == SOUTH:
+        y -= 1
+    elif direction == EAST:
+        x += 1
+    elif direction == WEST:
+        x -= 1
+    return x, y
+
+if __name__ == "__main__":
+    main()
