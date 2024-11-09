@@ -10,13 +10,12 @@ class Deck:
         self.deck = [Card(rank, suit) for suit in suits for rank in ranks]
 
     def __str__(self):
-        # Return the deck as a string with 13 cards per line
-        deck_str = ""
-        for i, card in enumerate(self.deck):
-            deck_str += str(card) + " "
-            if (i + 1) % 13 == 0:
-                deck_str += "\n"
-        return deck_str.strip()
+        # Format the deck as a string with 13 cards per line
+        lines = []
+        for i in range(0, len(self.deck), 13):
+            line = " ".join(str(card) for card in self.deck[i:i+13])
+            lines.append(line)
+        return "\n".join(lines)
 
     def shuffle(self):
         random.shuffle(self.deck)  # Shuffle using random.shuffle
