@@ -1,25 +1,38 @@
-def value_of_ace(card_one, card_two):
-    """Calculate the most advantageous value for the ace card.
+paper_list = [] 
 
-    :param card_one, card_two: str - card dealt. See below for values.
-    :return: int - either 1 or 11 value of the upcoming ace card.
+def add_door():
+    paper_count = int(input("Enter the number of papers for the door: "))
+    paper_list.append(paper_count)
 
-    1.  'J', 'Q', or 'K' (otherwise known as "face cards") = 10
-    2.  'A' (ace card) = 11 (if already in hand)
-    3.  '2' - '10' = numerical value.
-    """
-    
-    # Define the value of each card in a dictionary
-    card_values = {
-        'J': 10, 'Q': 10, 'K': 10,
-        'A': 11,  # Note: we're assuming that an ace is worth 11 here
-        '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10
-    }
+def edit_menu():
+    quitting = False
+    while not quitting: 
+        for i in range(len(paper_list)):
+            print(i + 1, ": ", paper_list[i])
+        door_num = int(input("Enter the door number or '0' to exit to main menu: "))
+        if door_num == 0:
+            quitting = True
+        elif 0 < door_num <= len(paper_list):
+            paper_list[door_num - 1] = int(input(f"Number of papers on for door {door_num}: "))
 
-    # If either card is an ace, the value of an additional ace should be 1 to avoid busting
-    if card_one == 'A' or card_two == 'A': # If either card is an ace
-        return 1 # Return 1
-    else: 
-        return 11 
+def main_menu():
+    quitting = False
+    while not quitting:
+        print("Welcome to paper route program")
+        print("************")
+        print("Options:")
+        print("D: Add door")
+        print("E: View and edit")
+        print("Q: Exit the program ")
+        print("************")
+        choice = input("Enter your choice: ")
+        if choice == "D" or choice == "d":
+            add_door()
+        if choice == "E" or choice == "e":
+            edit_menu()
+        if choice == "Q" or choice == "q":
+            quitting = True 
 
-print(value_of_ace('7', '3'))  
+if __name__ == "__main__":
+    main_menu()
+        
